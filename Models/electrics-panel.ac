@@ -1,0 +1,65 @@
+AC3Db
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+OBJECT world
+kids 1
+OBJECT group
+name "electrics-panel"
+kids 2
+OBJECT poly
+name "electrics-panel_0"
+data 15
+electrics-panel
+crease 30.000000
+numvert 8
+0 -0.15736 0
+0 -0.15736 0.252823
+-0.029503 -0.15736 0.252823
+-0.029503 -0.15736 0
+0 0 0
+0 0 0.252823
+-0.029503 0 0.252823
+-0.029503 0 0
+numsurf 3
+SURF 0x00
+mat 0
+refs 4
+0 0.0 0.0
+1 1.0 0.0
+2 1.0 1.0
+3 0.0 1.0
+SURF 0x00
+mat 0
+refs 4
+1 0.0 0.0
+5 1.0 0.0
+6 1.0 1.0
+2 0.0 1.0
+SURF 0x00
+mat 0
+refs 4
+4 -1.5 0.0
+0 2.5 0.0
+3 2.5 1.0
+7 -1.5 1.0
+kids 0
+OBJECT poly
+name "electrics-panel_1"
+data 15
+electrics-panel
+texture "electric-switch-panel.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+0 -0.15736 0
+0 -0.15736 0.252823
+0 0 0
+0 0 0.252823
+numsurf 1
+SURF 0x00
+mat 0
+refs 4
+0 0.702121317387 0.127788007259
+2 0.702121078968 0.992828369141
+3 0.00721133500338 0.992828369141
+1 0.00721194781363 0.127788007259
+kids 0

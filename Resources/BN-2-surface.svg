@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1052.3622"
+   height="744.09448"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="BN-2.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/usr/share/FlightGear/Aircraft/BN-2/Models/BN-2.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective2447"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.4625"
+     inkscape:cx="703.90614"
+     inkscape:cy="704.51726"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     inkscape:window-width="1147"
+     inkscape:window-height="751"
+     inkscape:window-x="42"
+     inkscape:window-y="23"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       orientation="0,1"
+       position="97.837838,563.78378"
+       id="guide2386" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="image"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <image
+       y="11.790754"
+       x="14.428572"
+       id="image2449"
+       height="1024"
+       width="1024"
+       sodipodi:absref="/usr/share/FlightGear/Aircraft/BN-2/Models/BN-2-livery.png"
+       xlink:href="BN-2-livery.png" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="surface"
+     style="display:inline">
+    <path
+       transform="matrix(1,0,-0.1647751,0.9863312,0,0)"
+       style="fill:none;stroke:#404040;stroke-width:1.00690532;stroke-miterlimit:4;stroke-opacity:1"
+       d="M 342.74954,73.885635 L 369.7756,73.885635 C 370.92252,73.885635 372.83362,74.786744 375.91938,78.908141 C 375.91938,78.908141 408.47151,123.68167 408.47151,123.68167 C 411.83953,127.36757 411.8507,131.70559 411.77152,134.21671 L 411.21362,151.90992 C 411.12568,154.69909 410.37588,156.01727 405.78819,156.01727 L 342.74954,156.01727 C 338.16185,156.01727 334.46851,152.32392 334.46851,147.73623 L 334.46851,82.166672 C 334.46851,77.578978 338.16185,73.885635 342.74954,73.885635 z"
+       id="rect3247"
+       sodipodi:nodetypes="ccsszzccccc"
+       inkscape:export-filename="/usr/share/FlightGear/Aircraft/BN-2/Models/path3252.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g2388">
+      <rect
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/usr/share/FlightGear/Aircraft/BN-2/Models/path3252.png"
+         transform="matrix(1,0,-0.1647751,0.9863312,0,0)"
+         ry="8.2810364"
+         y="73.885635"
+         x="177.32565"
+         height="82.13163"
+         width="43.588127"
+         id="rect2473"
+         style="fill:none;stroke:#404040;stroke-width:1.00690532;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/usr/share/FlightGear/Aircraft/BN-2/Models/path3252.png"
+         rx="0"
+         ry="0.71428573"
+         y="109.80877"
+         x="190.71428"
+         height="2.0535715"
+         width="9.0625"
+         id="rect3245"
+         style="fill:#404040;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         sodipodi:open="true"
+         sodipodi:end="1.8325957"
+         sodipodi:start="0"
+         d="M 199.82143,110.52306 A 8.5714283,8.5714283 0 0 1 189.03155,118.80243"
+         sodipodi:ry="8.5714283"
+         sodipodi:rx="8.5714283"
+         sodipodi:cy="110.52306"
+         sodipodi:cx="191.25"
+         id="path3252"
+         style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:type="arc" />
+    </g>
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/usr/share/FlightGear/Aircraft/BN-2/Models/path3252.png"
+       sodipodi:nodetypes="ccszzzccccc"
+       id="path2401"
+       d="M 217.60206,287.23604 L 244.62812,287.23604 C 245.77504,287.23604 247.53766,286.34725 249.94431,282.28219 C 249.94431,282.28219 264.79895,254.74722 264.79895,254.74722 C 266.17929,252.92946 266.90493,246.82274 266.36305,244.35618 L 258.87644,210.27826 C 258.27456,207.53858 257.36191,206.22705 252.77422,206.22705 L 204.06881,206.22705 C 199.48112,206.22705 196.39635,209.86992 197.15229,214.3949 L 207.95652,279.0682 C 208.71246,283.59318 213.01437,287.23604 217.60206,287.23604 z"
+       style="fill:none;stroke:#404040;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2425"
+       width="18.435509"
+       height="4.4114847"
+       x="984.01349"
+       y="152.5052"
+       ry="1.4866389" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#rect2425"
+       id="use3197"
+       transform="translate(0,33.783784)"
+       width="1052.3622"
+       height="744.09448" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3197"
+       id="use3199"
+       transform="translate(0,31.891892)"
+       width="1052.3622"
+       height="744.09448" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 993.05639,139.01504 L 993.1922,259.33168"
+       id="path3201"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

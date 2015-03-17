@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>indicator-lamp.ac</path>
+	
+	<animation>
+		<type>select</type>
+		<object-name>bulb-lit</object-name>
+		<condition>
+			<equals>
+				<property>/controls/flight/flaps</property>
+				<value>1.0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>bulb</object-name>
+		<condition>
+			<not>
+				<equals>
+					<property>/controls/flight/flaps</property>
+					<value>1.0</value>
+				</equals>
+			</not>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>bulb-lit</object-name>
+		<emission>
+			<red>1.0</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+			<factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+		</emission>
+	</animation>
+	
+</PropertyList>
+
+

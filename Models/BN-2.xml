@@ -1,0 +1,931 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>BN-2.ac</path>
+
+<nasal>
+	<load>
+		var livery_update = aircraft.livery_update.new("Aircraft/BN-2/Models/Liveries", 10);
+	</load>
+ 
+	<unload>
+		livery_update.stop();
+	</unload>
+</nasal>
+
+
+ <model>
+	 <name>pilot</name>
+	 <path>Aircraft/BN-2/Models/Pilot/pilot.xml</path>
+	 <offsets>
+		 <x-m>-1.75</x-m>
+		 <y-m>-0.253</y-m>
+		 <z-m>-0.90</z-m>
+	 </offsets> 
+</model>
+
+<!-- Pilot inside can be toggled from menu, but is always visible from outside-->
+ <animation>
+	 <type>select</type>
+	 <object-name>pilot</object-name>
+	 <condition>
+		 <or>
+			 <property>sim/model/show-pilot</property>
+			 <not>
+				 <equals>
+					 <property>sim/current-view/view-number</property>
+					 <value>0</value>
+				 </equals>
+			 </not>
+		 </or>
+	 </condition>
+ </animation>
+ 
+ <!--  conceal Pilot Head etc in Cockpit View-->
+ 
+ <!--
+ <animation>
+	 <type>select</type>
+	 <object-name>Pilot-Head</object-name>
+	 <object-name>Helmet</object-name>
+	 <object-name>Visor</object-name>
+	 <object-name>Mask</object-name>
+	 <object-name>Lever</object-name>
+	 <condition>
+		 <not>
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+		 </not>
+	 </condition>
+</animation>
+-->
+<!-- Pilot submodel 
+
+
+-->
+
+
+<!-- Interior submodels -->
+<model>
+	<name>pedestal</name>
+	<path>Aircraft/BN-2/Models/pedestal.xml</path>
+	<offsets>
+		<x-m>-2.134</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.852</z-m>
+	</offsets> 
+</model>
+
+
+<!-- electrical switch panel-->
+<model>
+	<name>electrics-panel</name>
+	<path>Aircraft/BN-2/Models/electrics-panel.xml</path>
+	<offsets>
+		<x-m>-2.185</x-m>
+		<y-m>-0.085</y-m>
+		<z-m>-0.8</z-m>
+	</offsets> 
+</model>
+
+<model>
+	<name>overhead-panel</name>
+	<path>Aircraft/BN-2/Models/overhead-panel.xml</path>
+	<offsets>
+		<x-m>-1.984</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.076</z-m>
+	</offsets> 
+</model>
+
+<!-- Not ready yet
+<model>
+	<name>fuel-console</name>
+	<path>Aircraft/BN-2/Models/fuel-console.xml</path>
+	<offsets>
+		<x-m>-1.818</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.106</z-m>
+	</offsets> 
+</model>
+-->
+
+<animation>
+	<type>select</type>
+	<object-name>yoke-placeholder.L</object-name>
+	<condition>
+		<less-than>
+			<property>engines/engine[0]/rpm</property>
+			<value>0</value>
+		</less-than>
+	</condition>
+</animation>
+
+<model>
+	<name>yoke.L</name>
+	<path>Aircraft/BN-2/Models/yoke.xml</path>
+	<offsets>
+		<x-m>-2.188</x-m>
+		<y-m>-0.283</y-m>
+		<z-m>-0.77</z-m>
+		<pitch-deg>-12</pitch-deg>
+	</offsets> 
+</model>
+
+<model>
+	<name>yoke.R</name>
+	<path>Aircraft/BN-2/Models/yoke.xml</path>
+	<offsets>
+		<x-m>-2.188</x-m>
+		<y-m>0.283</y-m>
+		<z-m>-0.77</z-m>
+	</offsets> 
+</model>
+
+
+<!-- Instrumentation -->
+
+<!-- column 1 -->
+<model>
+	<name>TC-pilot</name>
+	<path>Aircraft/Instruments-3d/tc/tc.xml</path>
+	<offsets>
+		<x-m>-2.185</x-m>
+		<y-m>-0.485</y-m>
+		<z-m>-0.60</z-m>
+	</offsets> 
+</model>
+
+<!--secondary altimeter--> 
+
+<!-- column 2 -->
+<model>
+	<name>ASI-pilot</name>
+	<path>Aircraft/Instruments-3d/asi-pa24/asi.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m> 
+		<y-m>-0.38 </y-m> 
+		<z-m>-0.51</z-m>  
+	</offsets>
+</model>
+
+<!--KI-227?-->
+ <model>
+	<name>ADF</name>
+	<path>Aircraft/Instruments-3d/adf/adf.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m> 
+		<y-m>-0.38 </y-m> 
+
+		<z-m>-0.59</z-m> 
+	 </offsets>
+ </model>
+ 
+ <!-- some switch -->
+ 
+ 
+<!-- column 3 -->
+<model>
+	<name>AI</name>
+	<path>Aircraft/c172p/Instruments/AI/AI.xml</path>
+	<offsets>
+		<x-m>-2.165</x-m> 
+		<y-m>-0.283</y-m>
+		<z-m>-0.50</z-m>
+	</offsets>
+ </model>
+
+ <model>
+	<name>KI-252A</name>
+	<path>Aircraft/Aerostar-700/Models/Instruments/kfc200/ki252a.xml</path>
+	<offsets>
+		<x-m>-2.183</x-m>
+		<y-m>-0.283</y-m>
+		<z-m>-0.59</z-m>
+	</offsets>
+ </model>
+ 
+ 
+ <!--KI-206?-->
+ <model>
+	<name>VOR</name>
+	<path>Aircraft/Instruments-3d/vor/vor.xml</path>
+	<offsets>
+		<x-m>-2.182</x-m>
+		<y-m>-0.283</y-m>
+		<z-m>-0.68</z-m>
+	</offsets>
+ </model>
+ 
+<!-- yoke-->
+
+<model>
+	<name>altimeter</name>
+	<path>Aircraft/Instruments-3d/alt/alt.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m> 
+		<y-m>-0.161</y-m> 
+		<z-m>-0.52</z-m> 
+	</offsets>
+</model>
+
+<model>
+	<name>VSI</name>
+	<path>Aircraft/Instruments-3d/vsi/vsi.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>-0.161</y-m>
+		<z-m>-0.60</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>clock</name>
+	<path>Aircraft/c172p/Instruments/clock/clock.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>-0.085</y-m>
+		<z-m>-0.63</z-m>
+	</offsets>
+</model>
+
+
+<!-- copilot -->
+<model>
+	<name>ASI-copilot</name>
+	<path>Aircraft/Instruments-3d/asi-pa24/asi.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m> 
+		<y-m>0.273 </y-m> 
+		<z-m>-0.57</z-m>  
+	</offsets>
+</model>
+
+<model>
+	<name>AI-copilot</name>
+	<path>Aircraft/c172p/Instruments/AI/AI.xml</path>
+	<offsets>
+		<x-m>-2.17</x-m> 
+		<y-m>0.363</y-m>
+		<z-m>-0.57</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>alt-copilot</name>
+	<path>Aircraft/Instruments-3d/alt/alt.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m> 
+		<y-m>0.453</y-m>
+		<z-m>-0.57</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>TC-copilot</name>
+	<path>Aircraft/Instruments-3d/tc/tc.xml</path>
+	<offsets>
+		<x-m>-2.185</x-m>
+		<y-m>0.273</y-m>
+		<z-m>-0.67</z-m>
+	</offsets> 
+</model>
+
+<model>
+	<name>HI-copilot</name>
+	<path>Aircraft/Instruments-3d/hi/hi.xml</path>
+	<!-- TODO- Sigma-Tek Directional Gyro-->
+	<offsets>
+		<x-m>-2.185</x-m>
+		<y-m>0.363</y-m>
+		<z-m>-0.67</z-m>
+	</offsets> 
+</model>
+
+<model>
+	<name>vsi-copilot</name>
+	<path>Aircraft/Instruments-3d/vsi/vsi.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>0.453</y-m>
+		<z-m>-0.67</z-m>
+	</offsets> 
+</model>
+
+<!-- central column of engine gauges, vertical spacing .055m-->
+
+<model>
+	<name>tach-0</name>
+	<path>Aircraft/BN-2/Instruments/tach-0.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>-0.03</y-m>
+		<z-m>-0.465</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>tach-1</name>
+	<path>Aircraft/BN-2/Instruments/tach-1.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>0.03</y-m>
+		<z-m>-0.465</z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<name>manifold-pressure-0</name>
+	<path>Aircraft/BN-2/Instruments/manifold-pressure-0.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>-0.03</y-m>
+		<z-m>-0.520</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>manifold-pressure-1</name>
+	<path>Aircraft/BN-2/Instruments/manifold-pressure-1.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>0.03</y-m>
+		<z-m>-0.520</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>fuel-pressure-0</name>
+	<path>Aircraft/BN-2/Instruments/fuel-pressure-0.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>-0.03</y-m>
+		<z-m>-0.575</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>fuel-pressure-1</name>
+	<path>Aircraft/BN-2/Instruments/fuel-pressure-1.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>0.03</y-m>
+		<z-m>-0.575</z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<name>oil-temp-pressure-0</name>
+	<path>Aircraft/BN-2/Instruments/oil-temp-pressure-0.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>-0.03</y-m>
+		<z-m>-0.630</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>oil-temp-pressure-1</name>
+	<path>Aircraft/BN-2/Instruments/oil-temp-pressure-1.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>0.03</y-m>
+		<z-m>-0.630</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>egt-cht-0</name>
+	<path>Aircraft/BN-2/Instruments/egt-cht-0.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>-0.03</y-m>
+		<z-m>-0.685</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>egt-cht-1</name>
+	<path>Aircraft/BN-2/Instruments/egt-cht-1.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>0.03</y-m>
+		<z-m>-0.685</z-m>
+	</offsets>
+</model>
+
+
+<!-- Radio stack-->
+
+<!-- Sample Configuration
+     KMA 24H Audio Control System
+     KR 87 ADF
+     KX 155A Nav/Comm
+     KX 155A Nav/Comm
+     ??
+     KT 73 Transponder
+-->
+<model>
+	<name>kma20</name>
+	<path>Aircraft/Instruments-3d/kma20/kma20.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>0.14</y-m>
+		<z-m>-0.470</z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<name>kr87</name>
+	<path>Aircraft/c172p/Instruments/kr87-adf/kr87.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>0.14</y-m>
+		<z-m>-0.525</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>kx165-1</name>
+	<path>Aircraft/Instruments-3d/kx165/kx165-1.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>0.14</y-m>
+		<z-m>-0.580</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>kx165-2</name>
+	<path>Aircraft/Instruments-3d/kx165/kx165-2.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>0.14</y-m>
+		<z-m>-0.635</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>kt70</name>
+	<path>Aircraft/Instruments-3d/kt70/kt70.xml</path>
+	<offsets>
+		<x-m>-2.187</x-m>
+		<y-m>0.14</y-m>
+		<z-m>-0.690</z-m>
+	</offsets>
+</model>
+
+
+
+<!-- propellers -->
+
+<animation>
+	<type>select</type>
+	<object-name>prop-left</object-name>
+	<object-name>prop-right</object-name>
+	<condition>
+		<less-than>
+			<property>engines/engine[0]/rpm</property>
+			<value>400</value>
+		</less-than>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>prop-blur-left</object-name>
+	<object-name>prop-blur-right</object-name>
+	<condition>
+		<greater-than>
+			<property>engines/engine[0]/rpm</property>
+			<value>399</value>
+		</greater-than>
+		<less-than>
+			<property>engines/engine[0]/rpm</property>
+			<value>1000</value>
+		</less-than>
+	</condition>
+</animation>
+ 
+<animation>
+	<type>select</type>
+	<object-name>prop-disc-left</object-name>
+	<object-name>prop-disc-right</object-name>
+	<condition>
+		<greater-than>
+			<property>engines/engine[0]/rpm</property>
+			<value>999</value>
+		</greater-than>
+	</condition>
+</animation>
+	
+<!--
+<animation>
+	<type>select</type>
+	<condition>
+		<less-than>
+			<property>engines/engine[1]/rpm</property>
+			<value>400</value>
+		</less-than>
+	</condition>
+</animation>
+	
+<animation>
+	<type>select</type>
+	<condition>
+		<greater-than>
+			<property>engines/engine[1]/rpm</property>
+			<value>399</value>
+		</greater-than>
+		<less-than>
+			<property>engines/engine[1]/rpm</property>
+			<value>1000</value>
+		</less-than>
+	</condition>
+</animation>
+	
+<animation>
+	<type>select</type>
+	<condition>
+		<greater-than>
+			<property>engines/engine[1]/rpm</property>
+			<value>999</value>
+		</greater-than>
+	</condition>
+</animation>
+-->
+
+<animation>
+	<type>spin</type>
+	<object-name>prop-left</object-name>
+	<object-name>prop-blur-left</object-name>
+	<property>engines/engine[0]/rpm</property>
+	<center>
+		<x-m>1.295</x-m>
+		<y-m>-1.881</y-m>
+		<z-m>-0.323</z-m>
+	</center>
+	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+	
+	
+<animation>
+	<type>spin</type>
+	<object-name>prop-disc-left</object-name>
+	<property>engines/engine[0]/rpm</property>
+	<factor>0.005</factor>
+	<center>
+		<x-m>1.295</x-m>
+		<y-m>-1.881</y-m>
+		<z-m>-0.323</z-m>
+	</center>
+	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+	
+<animation>
+	<type>spin</type>
+	<object-name>prop-right</object-name>
+	<object-name>prop-blur-right</object-name>
+	<property>engines/engine[1]/rpm</property>
+	<center>
+		<x-m>0.1295</x-m>
+		<y-m>1.881</y-m>
+		<z-m>-0.323</z-m>
+	</center>
+	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+	
+<animation>
+	<type>spin</type>
+	<object-name>prop-disc-right</object-name>
+	<property>engines/engine[1]/rpm</property>
+	<factor>0.005</factor>
+	<center>
+		<x-m>0.1295</x-m>
+		<y-m>1.881</y-m>
+		<z-m>-0.323</z-m>
+	</center>
+	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+	
+
+
+ 
+<!-- external control surfaces -->
+<animation>
+	<type>rotate</type>
+	<object-name>FLAP</object-name>
+	<property>surface-positions/flap-pos-norm</property>
+	<factor>56</factor>
+	<center>
+		<x-m>1.07</x-m>
+		<y-m>0</y-m>
+		<z-m>-0.174</z-m>
+	</center>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>left-aileron</object-name>
+	<property>surface-positions/left-aileron-pos-norm</property>
+	<factor>18.0</factor>
+	<center>
+		<x-m>1.095</x-m>
+		<y-m>0</y-m>
+		<z-m>-0.052</z-m>
+	</center>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>right-aileron</object-name>
+	<property>surface-positions/right-aileron-pos-norm</property>
+	<factor>18.0</factor>
+	<center>
+		<x-m>1.095</x-m>
+		<y-m>0</y-m>
+		<z-m>-0.052</z-m>
+	</center>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>elevator</object-name>
+	<object-name>elevator-trim</object-name>
+	<property>surface-positions/elevator-pos-norm</property>
+	<factor>12.0</factor> <!-- measured from the model itself!-->
+	<center>
+		<x-m>6.25</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.1</z-m>
+	</center>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>rudder</object-name>
+	<property>surface-positions/rudder-pos-norm</property>
+	<factor>30.0</factor>
+	<center>
+		<x-m>6.15</x-m>
+		<y-m>0.0</y-m>
+		<z-m>1.1</z-m>
+	</center>
+	<axis>
+		<x>-1.0</x>
+		<y>0.0</y>
+		<z>-5.34</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>nose-wheel</object-name>
+	<object-name>front-fork</object-name>
+	<object-name>wheel-hub-nose</object-name>
+	<object-name>axle-nose</object-name>
+	<object-name>nosegear-cyl-base</object-name>
+	<property>gear/gear[0]/compression-m</property>
+	<center>
+		<x-m>-3.39</x-m>
+		<y-m>0</y-m>
+		<z-m>0.0</z-m>
+	</center>
+	<axis>
+		<x>0.0</x>
+		<y>0.0</y>
+		<z>1.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>NOSEGEAR</object-name>
+	<property>surface-positions/rudder-pos-norm</property>
+	<factor>25</factor>
+	<center>
+		<x-m>-3.39</x-m>
+		<y-m>0</y-m>
+		<z-m>0.0</z-m>
+	</center>
+	<axis>
+		<x>0.0</x>
+		<y>0.0</y>
+		<z>1.0</z>
+	</axis>
+</animation>
+
+
+<!-- Lights -->
+
+<!--Landing Lights-->
+<animation>
+	<type>select</type>
+	<object-name>landinglight.L</object-name>
+	<condition>
+		<property>controls/lighting/landing-light-left</property>
+	</condition>
+</animation>
+ 
+<animation>
+	<type>select</type>
+	<object-name>landinglight.R</object-name>
+	<condition>
+		<property>controls/lighting/landing-light-right</property>
+	</condition>
+</animation>
+
+<!--Beacon-->
+<animation>
+	<type>material</type>
+	<object-name>beacon</object-name>
+	<emission>
+		<red>   1.0 </red>
+		<green> 0.0 </green>
+		<blue>  0.0 </blue>
+		<factor-prop>controls/lighting/beacon</factor-prop>
+	</emission>
+</animation>
+  
+<animation>
+	<type>material</type>
+	<object-name>nav-light.L</object-name>
+	<emission>
+		<red>   1.0 </red>
+		<green> 0.0 </green>
+		<blue>  0.0 </blue>
+		<factor-prop>controls/lighting/nav-lights</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>nav-light.R</object-name>
+	<emission>
+		<red>   0.0 </red>
+		<green> 1.0 </green>
+		<blue>  0.0 </blue>
+		<factor-prop>controls/lighting/nav-lights</factor-prop>
+	</emission>
+</animation>
+
+
+<model>
+	<path>Aircraft/BN-2/Models/light/beacon.xml</path>
+	<offsets>
+		<x-m> 5.834 </x-m>
+		<y-m> 0.000 </y-m>
+		<z-m> 2.312 </z-m>
+	</offsets>
+</model>
+
+  <!--
+<animation>
+	<type>select</type>
+	<object-name>beacon-flash</object-name>
+	<condition>
+		<property>controls/lighting/beacon</property>
+	</condition>
+ </animation>
+ 
+ <animation>
+	 <type>select</type>
+	 <object-name>beacon-flash</object-name>
+	 <condition>
+		 <property>/sim/model/BN-2/lighting/beacon-top/state</property>
+	 </condition>
+ </animation> 
+ 
+ <beacon-flash-params>
+	 <light-near>0.4</light-near>
+	 <light-med>0.8</light-med>
+	 <light-far>10</light-far>
+ </beacon-flash-params>
+
+ <animation>
+	 <type>alpha-test</type>
+	 <object-name>beacon-flash</object-name>
+	 <alpha-factor>0.001</alpha-factor>
+ </animation>
+
+ <animation>
+	 <type>billboard</type>
+	 <object-name>beacon-flash</object-name>
+	 <spherical type="bool">true</spherical>
+ </animation>
+ 
+ 
+ <animation>
+	 <type>dist-scale</type>
+	 <object-name>beacon-flash</object-name>
+	 <interpolation>
+		 <entry>
+			 <ind>0</ind>
+			 <dep alias="../../../../beacon-flash-params/light-near"/>
+		 </entry>
+		 <entry>
+			 <ind>500</ind>
+			 <dep alias="../../../../beacon-flash-params/light-med"/>
+		 </entry>
+		 <entry>
+			 <ind>16000</ind>
+			 <dep alias="../../../../beacon-flash-params/light-far"/>
+		 </entry>
+	 </interpolation>
+ </animation>
+ -->
+ 
+ <!--
+	 <animation>
+		 <type>translate</type>
+		 <object-name>beacon-flash</object-name>
+		 <offset-m>6.2754</offset-m>
+		 <axis>
+			 <x>-5.834</x>
+			 <y>0</y>
+			 <z>2.312</z>
+		 </axis>
+	 </animation>
+	 -->
+
+<!-- Whoa, psychedelic! Turn it off, I'm trippin', dude...
+<animation>
+	 <type>shader</type>
+	 <shader>chrome</shader>
+	 <texture>glass_shader.png</texture>
+	 <object-name>canopy</object-name>
+</animation>
+-->
+
+<!-- object selection for livery -->
+<animation>
+	<type>material</type>
+	<object-name>fuselage</object-name>
+	<object-name>WING</object-name>
+	<object-name>left-aileron</object-name>
+	<object-name>right-aileron</object-name>
+	<object-name>vert-tail</object-name>
+	<object-name>horizontal-tail</object-name>
+	<object-name>rudder</object-name>
+	<object-name>elevator</object-name>
+	<object-name>elevator-trim</object-name>
+	<object-name>FLAP</object-name>
+	<object-name>nacelle-assembly.PT</object-name>
+	<object-name>nacelle-assembly.SB</object-name>
+	<object-name>spinner-port</object-name>
+	<object-name>spinner-stbd</object-name>
+	<object-name>gear-strut.PT</object-name>
+	<object-name>gear-strut.SB</object-name>
+	<object-name>spinner.L</object-name>
+	<object-name>spinner.R</object-name>
+	<object-name>tailskid</object-name>
+	
+	<property-base>sim/model/livery</property-base>
+	<texture-prop>texture</texture-prop>
+	<texture>BN-2-livery.png</texture>
+</animation>
+
+
+</PropertyList>

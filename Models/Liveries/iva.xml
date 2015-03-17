@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <sim>
+  <model>
+   <livery>
+    <name type="string">Island Virtual Airways</name>
+    <texture>Liveries/IVA/BN-2-livery.rgb</texture>
+   </livery>
+  </model>
+ </sim>
+</PropertyList>

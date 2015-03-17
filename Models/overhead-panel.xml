@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	<path>overhead-panel.ac</path>
+	
+	<model>
+		<name>mags-left-1-switch</name>
+		<path>Aircraft/BN-2/Instruments/mags-left-1-switch.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.333</y-m>
+			<z-m>-0.056</z-m>
+		</offsets>
+	</model>
+		
+	<model>
+		<name>mags-left-2-switch</name>
+		<path>Aircraft/BN-2/Instruments/mags-left-2-switch.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.306</y-m>
+			<z-m>-0.056</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>starter-select-switch</name>
+		<path>Aircraft/BN-2/Instruments/toggle-switch.ac</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.2715</y-m>
+			<z-m>-0.056</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>mags-right-1-switch</name>
+		<path>Aircraft/BN-2/Instruments/mags-right-1-switch.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.237</y-m>
+			<z-m>-0.056</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>mags-right-2-switch</name>
+		<path>Aircraft/BN-2/Instruments/mags-right-2-switch.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.212</y-m>
+			<z-m>-0.056</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>flap-indicator-up</name>
+		<path>Aircraft/BN-2/Instruments/flap-indicator-up.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.18</y-m>
+			<z-m>-0.02</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>flap-indicator-lo</name>
+		<path>Aircraft/BN-2/Instruments/flap-indicator-lo.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.18</y-m>
+			<z-m>-0.04</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>flap-indicator-down</name>
+		<path>Aircraft/BN-2/Instruments/flap-indicator-down.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.18</y-m>
+			<z-m>-0.06</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>fuel-qty-0</name>
+		<path>Aircraft/BN-2/Instruments/fuel-qty-0.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.10</y-m>
+			<z-m>-0.04</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>fuel-qty-1</name>
+		<path>Aircraft/BN-2/Instruments/fuel-qty-1.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.10</y-m>
+			<z-m>-0.04</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>fuel-pump-left-switch</name>
+		<path>Aircraft/BN-2/Instruments/fuel-pump-left-switch.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.064</y-m>
+			<z-m>-0.105</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>fuel-pump-right-switch</name>
+		<path>Aircraft/BN-2/Instruments/fuel-pump-right-switch.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0.064</y-m>
+			<z-m>-0.105</z-m>
+		</offsets>
+	</model>
+	
+</PropertyList>

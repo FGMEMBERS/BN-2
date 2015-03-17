@@ -1,0 +1,220 @@
+<!--
+Performance from Wikipedia
+Max speed 170mph
+Cruise speed 160mph
+Stall speed 40mph
+Ceiling 13,200 ft
+
+BN-2B-20 - from brochure
+Stall Speed @8000ft- 
+Flaps up, power off: 50kt/93kph
+Flaps down, power off: 40kt/74kph
+Max cruise 143 KIAS
+Econ cruise 128 KIAS
+
+Dimensions as annotated in brochure drawing:
+WING:
+span : 14.93m
+chord : 2.03m
+incidence 2deg
+leading edge, from nose : 3.53m
+aileron width : 2.29m
+flap width : 3.49m
+
+HSTAB
+incidence : -2deg
+chord : 1.22m
+width : 4.67m
+leading edge, from wing trailing edge : 4.04m
+
+FUSELAGE
+height : 1.47m
+width 1.21m
+
+WHEELS
+track : 3.61m
+wheelbase : 3.99m
+
+
+PROPS
+diameter : 1.98m
+-->
+
+<!-- BN-2 empty weight in pounds, from Wikipedia -->
+<airplane mass="3675">
+
+<approach speed="43" aoa="6" fuel="0.8">
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.25"/>
+  <control-setting axis="/controls/engines/engine[1]/throttle" value="0.25"/>
+  <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1.0"/>
+  <control-setting axis="/controls/flight/flaps" value="1.0"/>
+  <!--control-setting axis="/controls/gear/gear-down" value="1"/ -->
+  <solve-weight idx="0" weight="180"/>
+  <solve-weight idx="1" weight="1200"/>
+</approach>
+
+<cruise speed="143" alt="13200" fuel="0.8">
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
+  <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1.0"/>
+  <control-setting axis="/controls/flight/flaps" value="0.0"/>
+  <!-- control-setting axis="/controls/gear/gear-down" value="1"/ -->
+  <solve-weight idx="0" weight="200"/>
+  <solve-weight idx="1" weight="1000"/>
+</cruise>
+
+<!--PNR-->
+<!-- X and Y are negative-->
+<cockpit x="1.6" y="0.283" z="-0.32"/>
+<!-- cockpit x="1.6" y="0.283" z="-0.32"/ -->
+
+<!-- combined fuselage 
+<fuselage ax="3.86"  ay="0" az="-0.97" bx="-6.9" by="0" bz="-0.27" cx="1.22" cy="1.22"
+width="1.21" taper="0.3" midpoint="0.28"/>
+-->
+		
+<!--nose -->
+<fuselage ax="3.86" ay="0" az="-1.0" bx="-6.93" by="0" bz="-0.266" cx="1.22" cy="1.22"
+width="1.21" taper="0.1" midpoint="0.185"/>
+
+	
+<!--center -->
+<fuselage ax="2" ay="0" az="-0.75" bx="-1.55" by="0" bz="-0.75" cx="1" cy="1.22"
+		  width="1.21" taper="1.0" midpoint="0.5"/>
+
+	
+<!--rear -->
+<fuselage ax="-1.55" ay="0" az="-0.75" bx="-6.93" by="0" bz="-0.266"  cx="1" cy="1.22"
+		  width="1.21" taper="0.1" midpoint="0.0"/>
+
+	
+<!-- nacelles -->
+<fuselage ax="1.0" ay="1.88" az="-0.323" bx="-0.490" by="1.88" bz="-0.323"  cx="1.2" cy="1.2"
+		  width="0.8" taper="1" midpoint="0.5"/>
+
+<fuselage ax="1.0" ay="-1.88" az="-0.323" bx="-0.490" by="-1.88" bz="-0.323"  cx="1.2" cy="1.2"
+		  width="0.8" taper="1" midpoint="0.5"/>
+-->
+
+<!--PNR-->
+<!--NACA 23012 
+Coefficient of Lift: 0.3
+Distance of max camber from leading edge (as % of chord): 15
+Max thickness (as % of chord): 12
+-->
+<wing x="-0.45" y="0.6" z="-0.06" length="6.7" chord="2.03" sweep="0" dihedral="0" taper="1.0" camber="0.031" incidence="2.0">
+    <stall aoa="16" width="4" peak="1.5"/>
+    <!-- setting flap0 start too close to zero causes a nan error -->
+    <flap0 start="0.008" end=".54" lift="1.6" drag="1.9"/>
+    <flap1 start="0.61" end="0.92" lift="1.2" drag="1.2"/>
+    <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+    <control-speed control="FLAP0" transition-time="5"/>
+    <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
+    <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+    <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+    <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+    <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+</wing>
+
+<!--PNR-->
+<hstab x="-6.2" y="0.25" z="-0.119" length="2.085" chord="1.22" sweep="0" dihedral="0" taper="1" incidence="-2.0">
+  <stall aoa="16" width="4" peak="1.5"/>
+  <flap0 start="0" end="1" lift="1.6" drag="1.2"/>
+  <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+  <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+  <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+</hstab>
+
+<vstab x="-5.6" y="0.00" z="0.0" length="2.3" chord="2.0" sweep="15" taper="0.5">
+  <stall aoa="16" width="4" peak="1.5"/>
+  <flap0 start="0" end="1" lift="1.2" drag="1.2"/>
+  <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+  <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+  <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+</vstab>
+
+<!-- left gear strut surface-->
+<vstab x="-0.645" y="1.88" z="-0.435" length="-1.1" chord="0.4"
+	   sweep="0" taper="0.75">
+</vstab>
+
+<!-- right gear strut surface-->
+<vstab x="-0.645" y="-1.88" z="-0.435" length="-1.1" chord="0.4"
+	   sweep="0" taper="0.75">
+</vstab>
+
+<tank x="0.0" y="2.5" z="0.1" capacity="411"/>
+<tank x="0.0" y="-2.5" z="0.1" capacity="411"/>
+
+<!-- gear drag
+     
+<mstab x="-1.3" y="0.65" z="0.05" length="1.0" chord="2">
+    <flap0 start="0" end="1" lift="0.8" drag="20"/>
+  <control-input axis="/gear/gear[0]/position-norm" control="FLAP0"/>
+</mstab>
+-->
+
+<gear x="3.35" y="0.00" z="-2.075" compression=".3">
+	<control-input axis="/controls/flight/rudder" control="STEER" square="true"/>
+</gear>
+
+<gear x="-0.65" y="1.88" z="-2.13" compression=".20">
+	<control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+	<control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+</gear>
+
+<gear x="-0.65" y="-1.88" z="-2.13" compression=".20">
+	<control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+	<control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+</gear>
+
+
+<!--
+ENGINES
+300-hp Lycoming ,  both props rotate clockwise (positive moment)
+
+-->
+<!-- 
+     <propeller moment="-10" x="-1.2" y="1.8" z="0.20" mass="500" radius="0.99" gear-ratio="0.947"
+-->
+
+<propeller moment="10" x="-0.2" y="1.88" z="-0.32" mass="500" radius="0.99" gear-ratio="0.947"
+           cruise-power="300" cruise-alt="13200" min-rpm="1700" max-rpm="2700" cruise-speed="148"
+            cruise-rpm="2500" fine-stop="0.5" coarse-stop="4.0">
+  <piston-engine eng-rpm="2500" alt="13200" eng-power="300"/>
+  <actionpt x="1.09" y="1.88" z="-0.32" />
+  <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle" />
+  <control-input control="STARTER" axis="/controls/engines/engine[0]/starter" />
+  <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos" />
+  <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture" />
+  <control-input control="ADVANCE" axis="/controls/engines/engine[0]/propeller-pitch"/>
+</propeller>
+
+<propeller moment="10" x="-0.2" y="-1.88" z="-0.32" mass="500" radius="0.99" gear-ratio="0.947"
+ cruise-power="300" cruise-alt="13200" min-rpm="1700" max-rpm="2700" cruise-speed="148"
+ cruise-rpm="2500" fine-stop="0.5" coarse-stop="4.0">
+  <piston-engine eng-rpm="2500" alt="13200" eng-power="300"/>
+  <actionpt x="1.09" y="-1.88" z="-0.32" />
+  <control-input control="THROTTLE" axis="/controls/engines/engine[1]/throttle" />
+  <control-input control="STARTER" axis="/controls/engines/engine[1]/starter" />
+  <control-input control="MAGNETOS" axis="/controls/engines/engine[1]/magnetos" />
+  <control-input control="MIXTURE" axis="/controls/engines/engine[1]/mixture" />
+  <control-input control="ADVANCE" axis="/controls/engines/engine[1]/propeller-pitch"/>
+</propeller>
+
+
+<ballast x="-4.5" y="0.0" z="0" mass="-1800" />
+
+
+
+<weight x="0.5" y="0" z="0" mass-prop="/sim/weight[0]/weight-lb"/>
+<weight x="-1.8" y="0" z="0" mass-prop="/sim/weight[1]/weight-lb"/>
+
+ 
+</airplane>

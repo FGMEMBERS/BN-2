@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>gauge-2needle-45mm.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>face</object-name>
+		<texture>egt-cht.png</texture>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>needle.L</object-name>
+	<object-name>needle.R</object-name>
+	<object-name>face</object-name>
+	<emission>
+		<red>0.5</red>
+		<green>0.2</green>
+		<blue>0.0</blue>
+		<factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>needle.L</object-name>
+	<property>/engines/engine[1]/egt-degf</property>
+	<interpolation>
+		<entry><ind>752.0</ind><dep>-67.5</dep></entry>
+		<entry><ind>1832</ind><dep>67.5</dep></entry>
+	</interpolation>
+	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0</x-m>
+		<y-m>0</y-m>
+		<z-m>0</z-m>
+	</center>
+</animation>
+
+</PropertyList>

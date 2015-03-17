@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	<path>electrics-panel.ac</path>
+	
+	<model>
+		<name>pitot-heater-switch</name>
+		<path>Aircraft/BN-2/Instruments/toggle-switch.ac</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.22</y-m>
+			<z-m>-0.03</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>nav-lights-switch</name>
+		<path>Aircraft/BN-2/Instruments/nav-lights-switch.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.17</y-m>
+			<z-m>-0.03</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>landing-light-left-switch</name>
+		<path>Aircraft/BN-2/Instruments/landing-light-left-switch.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.145</y-m>
+			<z-m>-0.03</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>landing-light-right-switch</name>
+		<path>Aircraft/BN-2/Instruments/landing-light-right-switch.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.12</y-m>
+			<z-m>-0.03</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>left-gen-switch</name>
+		<path>Aircraft/BN-2/Instruments/generator-left-switch.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.08</y-m>
+			<z-m>-0.03</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>battery-switch</name>
+		<path>Aircraft/BN-2/Instruments/battery-switch.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.055</y-m>
+			<z-m>-0.03</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>right-gen-switch</name>
+		<path>Aircraft/BN-2/Instruments/generator-right-switch.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.03</y-m>
+			<z-m>-0.03</z-m>
+		</offsets>
+	</model>
+	
+
+	<model>
+		<name>cabin-lights-switch</name>
+		<path>Aircraft/BN-2/Instruments/cabin-lights-switch.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.17</y-m>
+			<z-m>-0.08</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>passenger-notices-switch</name>
+		<path>Aircraft/BN-2/Instruments/toggle-switch.ac</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.145</y-m>
+			<z-m>-0.08</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>beacon-switch</name>
+		<path>Aircraft/BN-2/Instruments/beacon-switch.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.12</y-m>
+			<z-m>-0.08</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>external-supply</name>
+		<path>Aircraft/BN-2/Instruments/toggle-switch.ac</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.03</y-m>
+			<z-m>-0.08</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>cockpit-lights</name>
+		<path>Aircraft/BN-2/Instruments/toggle-switch.ac</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.18</y-m>
+			<z-m>-0.13</z-m>
+		</offsets>
+	</model>
+	
+</PropertyList>

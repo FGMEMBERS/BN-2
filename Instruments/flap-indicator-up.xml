@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>indicator-lamp.ac</path>
+	
+<!--
+	<animation>
+		<type>select</type>
+		<object-name>bulb</object-name>
+		<condition>
+			<equals>
+				<property>controls/flight/flaps</property>
+				<value>0.45</value>
+			</equals>
+		</condition>
+ </animation>
+ 
+ -->
+ 
+</PropertyList>
+
+

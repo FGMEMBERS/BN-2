@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>toggle-switch-select.ac</path>
+ 
+ <animation>
+	<type>select</type>
+	<object-name>switch-on</object-name>
+	<condition>
+		<greater-than>
+			<property>controls/engines/engine[0]/magnetos</property>
+			<value>1</value>
+		</greater-than>
+	</condition>
+ </animation>
+
+ <animation>
+	 <type>select</type>
+	 <object-name>switch-off</object-name>
+	 <condition>
+		 <less-than>
+			 <property>controls/engines/engine[0]/magnetos</property>
+			 <value>2</value>
+		 </less-than>
+	 </condition>
+ </animation> 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch-off</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>false</repeatable>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>/controls/engines/engine[0]/magnetos</property>
+			 <step>2.0</step>
+			 <min>0</min>
+			 <max>3</max>
+			 <wrap>0</wrap>
+		 </binding>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>sim/sound/switch</property>
+		 </binding>
+	 </action>
+ </animation>
+ 
+ <animation>
+	 <type>pick</type>
+	 <object-name>switch-on</object-name>
+	 <action>
+		 <button>0</button>
+		 <repeatable>false</repeatable>
+		 <binding>
+			 <command>property-adjust</command>
+			 <property>/controls/engines/engine[0]/magnetos</property>
+			 <step>-2.0</step>
+			 <min>0</min>
+			 <max>3</max>
+			 <wrap>0</wrap>
+		 </binding>
+		 <binding>
+			 <command>property-toggle</command>
+			 <property>sim/sound/switch</property>
+		 </binding>
+	 </action>
+</animation>	
+</PropertyList>
+
+

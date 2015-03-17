@@ -1,0 +1,4 @@
+cabin
+length:3.05 width:1.09 height:1.27 
+
+Wing: NACA 23012
