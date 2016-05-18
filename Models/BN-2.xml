@@ -14,6 +14,26 @@
 	</unload>
 </nasal>
 
+<model>
+	<name>shadowOSG</name>
+	<path>Aircraft/BN-2/Models/shadow.xml</path>
+	<offsets>
+		<x-m> 0.0</x-m>
+		<y-m> 0.0</y-m>
+		<z-m> 0.0</z-m>
+<!--
+		<pitch-deg>1.2</pitch-deg>
+-->
+	</offsets>
+</model>
+
+<animation>
+	<type>select</type>
+	<object-name>shadowOSG</object-name>
+	<condition>
+		<property>sim/rendering/shadows-ac</property>
+	</condition>
+</animation>
 
  <model>
 	 <name>pilot</name>
@@ -79,7 +99,6 @@
 	</offsets> 
 </model>
 
-
 <!-- electrical switch panel-->
 <model>
 	<name>electrics-panel</name>
@@ -88,6 +107,16 @@
 		<x-m>-2.185</x-m>
 		<y-m>-0.085</y-m>
 		<z-m>-0.8</z-m>
+	</offsets> 
+</model>
+
+<model>
+	<name>panel</name>
+	<path>Aircraft/BN-2/Models/panel.xml</path>
+	<offsets>
+		<x-m>-2.188</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.430</z-m>
 	</offsets> 
 </model>
 
@@ -101,386 +130,17 @@
 	</offsets> 
 </model>
 
-<!-- Not ready yet
+
 <model>
 	<name>fuel-console</name>
 	<path>Aircraft/BN-2/Models/fuel-console.xml</path>
 	<offsets>
-		<x-m>-1.818</x-m>
+		<x-m>-1.868</x-m>
 		<y-m>0.0</y-m>
-		<z-m>-0.106</z-m>
+		<z-m>-0.08</z-m>
+		<roll-deg>180</roll-deg>
 	</offsets> 
 </model>
--->
-
-<animation>
-	<type>select</type>
-	<object-name>yoke-placeholder.L</object-name>
-	<condition>
-		<less-than>
-			<property>engines/engine[0]/rpm</property>
-			<value>0</value>
-		</less-than>
-	</condition>
-</animation>
-
-<model>
-	<name>yoke.L</name>
-	<path>Aircraft/BN-2/Models/yoke.xml</path>
-	<offsets>
-		<x-m>-2.188</x-m>
-		<y-m>-0.283</y-m>
-		<z-m>-0.77</z-m>
-		<pitch-deg>-12</pitch-deg>
-	</offsets> 
-</model>
-
-<model>
-	<name>yoke.R</name>
-	<path>Aircraft/BN-2/Models/yoke.xml</path>
-	<offsets>
-		<x-m>-2.188</x-m>
-		<y-m>0.283</y-m>
-		<z-m>-0.77</z-m>
-	</offsets> 
-</model>
-
-
-<!-- Instrumentation -->
-
-<!-- column 1 -->
-<model>
-	<name>TC-pilot</name>
-	<path>Aircraft/Instruments-3d/tc/tc.xml</path>
-	<offsets>
-		<x-m>-2.185</x-m>
-		<y-m>-0.485</y-m>
-		<z-m>-0.60</z-m>
-	</offsets> 
-</model>
-
-<!--secondary altimeter--> 
-
-<!-- column 2 -->
-<model>
-	<name>ASI-pilot</name>
-	<path>Aircraft/Instruments-3d/asi-pa24/asi.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m> 
-		<y-m>-0.38 </y-m> 
-		<z-m>-0.51</z-m>  
-	</offsets>
-</model>
-
-<!--KI-227?-->
- <model>
-	<name>ADF</name>
-	<path>Aircraft/Instruments-3d/adf/adf.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m> 
-		<y-m>-0.38 </y-m> 
-
-		<z-m>-0.59</z-m> 
-	 </offsets>
- </model>
- 
- <!-- some switch -->
- 
- 
-<!-- column 3 -->
-<model>
-	<name>AI</name>
-	<path>Aircraft/Instruments-3d/ai/ai.xml</path>
-	<offsets>
-		<x-m>-2.165</x-m> 
-		<y-m>-0.283</y-m>
-		<z-m>-0.50</z-m>
-	</offsets>
- </model>
-
- <model>
-	<name>KI-252A</name>
-	<path>Aircraft/Aerostar-700/Models/Instruments/kfc200/ki252a.xml</path>
-	<offsets>
-		<x-m>-2.183</x-m>
-		<y-m>-0.283</y-m>
-		<z-m>-0.59</z-m>
-	</offsets>
- </model>
- 
- 
- <!--KI-206?-->
- <model>
-	<name>VOR</name>
-	<path>Aircraft/Instruments-3d/vor/vor.xml</path>
-	<offsets>
-		<x-m>-2.182</x-m>
-		<y-m>-0.283</y-m>
-		<z-m>-0.68</z-m>
-	</offsets>
- </model>
- 
-<!-- yoke-->
-
-<model>
-	<name>altimeter</name>
-	<path>Aircraft/Instruments-3d/alt/alt.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m> 
-		<y-m>-0.161</y-m> 
-		<z-m>-0.52</z-m> 
-	</offsets>
-</model>
-
-<model>
-	<name>VSI</name>
-	<path>Aircraft/Instruments-3d/vsi/vsi.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>-0.161</y-m>
-		<z-m>-0.60</z-m>
-	</offsets>
-</model>
-
-<model>
-	<name>clock</name>
-	<path>Aircraft/Instruments-3d/clock/clock.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>-0.085</y-m>
-		<z-m>-0.63</z-m>
-	</offsets>
-</model>
-
-
-<!-- copilot -->
-<model>
-	<name>ASI-copilot</name>
-	<path>Aircraft/Instruments-3d/asi-pa24/asi.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m> 
-		<y-m>0.273 </y-m> 
-		<z-m>-0.57</z-m>  
-	</offsets>
-</model>
-
-<model>
-	<name>AI-copilot</name>
-	<path>Aircraft/Instruments-3d/ai/ai.xml</path>
-	<offsets>
-		<x-m>-2.17</x-m> 
-		<y-m>0.363</y-m>
-		<z-m>-0.57</z-m>
-	</offsets>
-</model>
-
-<model>
-	<name>alt-copilot</name>
-	<path>Aircraft/Instruments-3d/alt/alt.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m> 
-		<y-m>0.453</y-m>
-		<z-m>-0.57</z-m>
-	</offsets>
-</model>
-
-<model>
-	<name>TC-copilot</name>
-	<path>Aircraft/Instruments-3d/tc/tc.xml</path>
-	<offsets>
-		<x-m>-2.185</x-m>
-		<y-m>0.273</y-m>
-		<z-m>-0.67</z-m>
-	</offsets> 
-</model>
-
-<model>
-	<name>HI-copilot</name>
-	<path>Aircraft/Instruments-3d/hi/hi.xml</path>
-	<!-- TODO- Sigma-Tek Directional Gyro-->
-	<offsets>
-		<x-m>-2.185</x-m>
-		<y-m>0.363</y-m>
-		<z-m>-0.67</z-m>
-	</offsets> 
-</model>
-
-<model>
-	<name>vsi-copilot</name>
-	<path>Aircraft/Instruments-3d/vsi/vsi.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>0.453</y-m>
-		<z-m>-0.67</z-m>
-	</offsets> 
-</model>
-
-<!-- central column of engine gauges, vertical spacing .055m-->
-
-<model>
-	<name>tach-0</name>
-	<path>Aircraft/BN-2/Instruments/tach-0.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>-0.03</y-m>
-		<z-m>-0.465</z-m>
-	</offsets>
-</model>
-
-<model>
-	<name>tach-1</name>
-	<path>Aircraft/BN-2/Instruments/tach-1.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>0.03</y-m>
-		<z-m>-0.465</z-m>
-	</offsets>
-</model>
-
-
-<model>
-	<name>manifold-pressure-0</name>
-	<path>Aircraft/BN-2/Instruments/manifold-pressure-0.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>-0.03</y-m>
-		<z-m>-0.520</z-m>
-	</offsets>
-</model>
-
-<model>
-	<name>manifold-pressure-1</name>
-	<path>Aircraft/BN-2/Instruments/manifold-pressure-1.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>0.03</y-m>
-		<z-m>-0.520</z-m>
-	</offsets>
-</model>
-
-<model>
-	<name>fuel-pressure-0</name>
-	<path>Aircraft/BN-2/Instruments/fuel-pressure-0.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>-0.03</y-m>
-		<z-m>-0.575</z-m>
-	</offsets>
-</model>
-
-<model>
-	<name>fuel-pressure-1</name>
-	<path>Aircraft/BN-2/Instruments/fuel-pressure-1.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>0.03</y-m>
-		<z-m>-0.575</z-m>
-	</offsets>
-</model>
-
-
-<model>
-	<name>oil-temp-pressure-0</name>
-	<path>Aircraft/BN-2/Instruments/oil-temp-pressure-0.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>-0.03</y-m>
-		<z-m>-0.630</z-m>
-	</offsets>
-</model>
-
-<model>
-	<name>oil-temp-pressure-1</name>
-	<path>Aircraft/BN-2/Instruments/oil-temp-pressure-1.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>0.03</y-m>
-		<z-m>-0.630</z-m>
-	</offsets>
-</model>
-
-<model>
-	<name>egt-cht-0</name>
-	<path>Aircraft/BN-2/Instruments/egt-cht-0.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>-0.03</y-m>
-		<z-m>-0.685</z-m>
-	</offsets>
-</model>
-
-<model>
-	<name>egt-cht-1</name>
-	<path>Aircraft/BN-2/Instruments/egt-cht-1.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>0.03</y-m>
-		<z-m>-0.685</z-m>
-	</offsets>
-</model>
-
-
-<!-- Radio stack-->
-
-<!-- Sample Configuration
-     KMA 24H Audio Control System
-     KR 87 ADF
-     KX 155A Nav/Comm
-     KX 155A Nav/Comm
-     ??
-     KT 73 Transponder
--->
-<model>
-	<name>kma20</name>
-	<path>Aircraft/Instruments-3d/kma20/kma20.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>0.14</y-m>
-		<z-m>-0.470</z-m>
-	</offsets>
-</model>
-
-
-<model>
-	<name>kr87</name>
-	<path>Aircraft/Instruments-3d/kr87-adf/kr87.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>0.14</y-m>
-		<z-m>-0.525</z-m>
-	</offsets>
-</model>
-
-<model>
-	<name>kx165-1</name>
-	<path>Aircraft/Instruments-3d/kx165/kx165-1.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>0.14</y-m>
-		<z-m>-0.580</z-m>
-	</offsets>
-</model>
-
-<model>
-	<name>kx165-2</name>
-	<path>Aircraft/Instruments-3d/kx165/kx165-2.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>0.14</y-m>
-		<z-m>-0.635</z-m>
-	</offsets>
-</model>
-
-<model>
-	<name>kt70</name>
-	<path>Aircraft/Instruments-3d/kt70/kt70.xml</path>
-	<offsets>
-		<x-m>-2.187</x-m>
-		<y-m>0.14</y-m>
-		<z-m>-0.690</z-m>
-	</offsets>
-</model>
-
 
 
 <!-- propellers -->
@@ -488,7 +148,6 @@
 <animation>
 	<type>select</type>
 	<object-name>prop-left</object-name>
-	<object-name>prop-right</object-name>
 	<condition>
 		<less-than>
 			<property>engines/engine[0]/rpm</property>
@@ -500,7 +159,6 @@
 <animation>
 	<type>select</type>
 	<object-name>prop-blur-left</object-name>
-	<object-name>prop-blur-right</object-name>
 	<condition>
 		<greater-than>
 			<property>engines/engine[0]/rpm</property>
@@ -516,7 +174,6 @@
 <animation>
 	<type>select</type>
 	<object-name>prop-disc-left</object-name>
-	<object-name>prop-disc-right</object-name>
 	<condition>
 		<greater-than>
 			<property>engines/engine[0]/rpm</property>
@@ -525,41 +182,6 @@
 	</condition>
 </animation>
 	
-<!--
-<animation>
-	<type>select</type>
-	<condition>
-		<less-than>
-			<property>engines/engine[1]/rpm</property>
-			<value>400</value>
-		</less-than>
-	</condition>
-</animation>
-	
-<animation>
-	<type>select</type>
-	<condition>
-		<greater-than>
-			<property>engines/engine[1]/rpm</property>
-			<value>399</value>
-		</greater-than>
-		<less-than>
-			<property>engines/engine[1]/rpm</property>
-			<value>1000</value>
-		</less-than>
-	</condition>
-</animation>
-	
-<animation>
-	<type>select</type>
-	<condition>
-		<greater-than>
-			<property>engines/engine[1]/rpm</property>
-			<value>999</value>
-		</greater-than>
-	</condition>
-</animation>
--->
 
 <animation>
 	<type>spin</type>
@@ -596,6 +218,43 @@
 	</axis>
 </animation>
 	
+<animation>
+	<type>select</type>
+	<object-name>prop-right</object-name>
+	<condition>
+		<less-than>
+			<property>engines/engine[1]/rpm</property>
+			<value>400</value>
+		</less-than>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>prop-blur-right</object-name>
+	<condition>
+		<greater-than>
+			<property>engines/engine[1]/rpm</property>
+			<value>399</value>
+		</greater-than>
+		<less-than>
+			<property>engines/engine[1]/rpm</property>
+			<value>1000</value>
+		</less-than>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>prop-disc-right</object-name>
+	<condition>
+		<greater-than>
+			<property>engines/engine[1]/rpm</property>
+			<value>999</value>
+		</greater-than>
+	</condition>
+</animation>
+
 <animation>
 	<type>spin</type>
 	<object-name>prop-right</object-name>
@@ -729,8 +388,8 @@
 	<object-name>nosegear-cyl-base</object-name>
 	<property>gear/gear[0]/compression-m</property>
 	<center>
-		<x-m>-3.39</x-m>
-		<y-m>0</y-m>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
 		<z-m>0.0</z-m>
 	</center>
 	<axis>
@@ -757,6 +416,47 @@
 	</axis>
 </animation>
 
+<animation>
+	<type>translate</type>
+	<object-name>wheel.LI</object-name>
+	<object-name>wheel.LO</object-name>
+	<object-name>wheel-hub.LI</object-name>
+	<object-name>wheel-hub.LO</object-name>
+	<object-name>axle-main.L</object-name>
+	<object-name>main-gear-shaft.L</object-name>
+	<property>gear/gear[1]/compression-m</property>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>0.0</z-m>
+	</center>
+	<axis>
+		<x>0.0</x>
+		<y>0.0</y>
+		<z>1.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>wheel.RI</object-name>
+	<object-name>wheel.RO</object-name>
+	<object-name>wheel-hub.RI</object-name>
+	<object-name>wheel-hub.RO</object-name>
+	<object-name>axle-main.R</object-name>
+	<object-name>main-gear-shaft.R</object-name>
+	<property>gear/gear[2]/compression-m</property>
+	<center>
+		<x-m>0.0</x-m>
+		<y-m>0.0</y-m>
+		<z-m>0.0</z-m>
+	</center>
+	<axis>
+		<x>0.0</x>
+		<y>0.0</y>
+		<z>1.0</z>
+	</axis>
+</animation>
 
 <!-- Lights -->
 
@@ -899,6 +599,40 @@
 </animation>
 -->
 
+   <!-- illumination -->
+  <animation>
+		<type>material</type>
+		<object-name>interior-ceil</object-name>
+
+		<ambient>
+			<red>1.0</red>
+			<green>1.0</green>
+			<blue>0.7</blue>
+			<factor-prop>/controls/lighting/cabin-lights</factor-prop>
+		</ambient>
+
+		<specular>
+			<red>1.0</red>
+			<green>1.0</green>
+			<blue>0.7</blue>
+			<factor-prop>/controls/lighting/cabin-lights</factor-prop>
+		</specular>
+		
+		<diffuse>
+			<red>1.0</red>
+			<green>1.0</green>
+			<blue>0.7</blue>
+			<factor-prop>/controls/lighting/cabin-lights</factor-prop>
+		</diffuse>
+
+		<emission>
+			<red>0.3</red>
+			<green>0.3</green>
+			<blue>0.3</blue>
+			<factor-prop>/controls/lighting/cabin-lights</factor-prop>
+		</emission>
+</animation>
+
 <!-- object selection for livery -->
 <animation>
 	<type>material</type>
@@ -921,6 +655,7 @@
 	<object-name>spinner.L</object-name>
 	<object-name>spinner.R</object-name>
 	<object-name>tailskid</object-name>
+	<object-name>belly-vent</object-name>
 	
 	<property-base>sim/model/livery</property-base>
 	<texture-prop>texture</texture-prop>

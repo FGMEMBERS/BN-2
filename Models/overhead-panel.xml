@@ -26,11 +26,12 @@
 
 	<model>
 		<name>starter-select-switch</name>
-		<path>Aircraft/BN-2/Instruments/toggle-switch.ac</path>
+		<path>Aircraft/BN-2/Instruments/starter-select-switch.xml</path>
 		<offsets>
 			<x-m>0</x-m>
 			<y-m>-0.2715</y-m>
 			<z-m>-0.056</z-m>
+			<roll-deg>-90</roll-deg>
 		</offsets>
 	</model>
 
@@ -54,6 +55,18 @@
 		</offsets>
 	</model>
 
+
+	<model>
+		<name>flap-indicators</name>
+		<path>Aircraft/BN-2/Instruments/flap-indicators.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>-0.18</y-m>
+			<z-m>-0.04</z-m>
+		</offsets>
+	</model>
+
+<!--
 	<model>
 		<name>flap-indicator-up</name>
 		<path>Aircraft/BN-2/Instruments/flap-indicator-up.xml</path>
@@ -83,12 +96,13 @@
 			<z-m>-0.06</z-m>
 		</offsets>
 	</model>
-
+-->
+	
 	<model>
 		<name>fuel-qty-0</name>
 		<path>Aircraft/BN-2/Instruments/fuel-qty-0.xml</path>
 		<offsets>
-			<x-m>0</x-m>
+			<x-m>0.002</x-m>
 			<y-m>-0.10</y-m>
 			<z-m>-0.04</z-m>
 		</offsets>
@@ -98,7 +112,7 @@
 		<name>fuel-qty-1</name>
 		<path>Aircraft/BN-2/Instruments/fuel-qty-1.xml</path>
 		<offsets>
-			<x-m>0</x-m>
+			<x-m>0.002</x-m>
 			<y-m>0.10</y-m>
 			<z-m>-0.04</z-m>
 		</offsets>
