@@ -190,7 +190,7 @@
 <!-- column 3 -->
 <model>
 	<name>AI</name>
-	<path>Aircraft/c172p/Instruments/AI/AI.xml</path>
+	<path>Aircraft/Instruments-3d/ai/ai.xml</path>
 	<offsets>
 		<x-m>-2.165</x-m> 
 		<y-m>-0.283</y-m>
@@ -244,7 +244,7 @@
 
 <model>
 	<name>clock</name>
-	<path>Aircraft/c172p/Instruments/clock/clock.xml</path>
+	<path>Aircraft/Instruments-3d/clock/clock.xml</path>
 	<offsets>
 		<x-m>-2.187</x-m>
 		<y-m>-0.085</y-m>
@@ -266,7 +266,7 @@
 
 <model>
 	<name>AI-copilot</name>
-	<path>Aircraft/c172p/Instruments/AI/AI.xml</path>
+	<path>Aircraft/Instruments-3d/ai/ai.xml</path>
 	<offsets>
 		<x-m>-2.17</x-m> 
 		<y-m>0.363</y-m>
@@ -443,7 +443,7 @@
 
 <model>
 	<name>kr87</name>
-	<path>Aircraft/c172p/Instruments/kr87-adf/kr87.xml</path>
+	<path>Aircraft/Instruments-3d/kr87-adf/kr87.xml</path>
 	<offsets>
 		<x-m>-2.187</x-m>
 		<y-m>0.14</y-m>
