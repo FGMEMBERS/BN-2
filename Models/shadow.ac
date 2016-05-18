@@ -1,0 +1,26 @@
+AC3Db
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+MATERIAL "DefaultWhite" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
+OBJECT world
+kids 1
+OBJECT poly
+name "shadow"
+data 6
+shadow
+texture "BN-2-shadow.png"
+texrep 1 1
+crease 30.000000
+numvert 4
+6.977364 -1.991743 -7.296416
+6.977383 -1.991745 7.353584
+-3.948 -1.991745 7.353584
+-3.948 -1.991743 -7.296416
+numsurf 1
+SURF 0x00
+mat 1
+refs 4
+1 0.740600645542 5.58664012829e-08
+0 0.740600645542 1.0
+3 0.0 1.0
+2 0.0 0.0
+kids 0

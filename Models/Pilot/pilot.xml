@@ -30,7 +30,7 @@
     <object-name>visiere</object-name>
   </animation>
 
-  <!-- Visière invisible depuis le cockpit -->
+  <!-- Visiere invisible depuis le cockpit -->
   <animation>
     <type>select</type>
     <object-name>visiere</object-name>

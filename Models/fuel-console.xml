@@ -4,4 +4,68 @@
 	
 	<path>fuel-console.ac</path>
 	
+	<animation>
+		<type>material</type>
+		<object-name>base</object-name>
+
+		<ambient>
+			<red>1.0</red>
+			<green>1.0</green>
+			<blue>0.7</blue>
+			<factor-prop>/controls/lighting/cabin-lights</factor-prop>
+		</ambient>
+
+		<specular>
+			<red>1.0</red>
+			<green>1.0</green>
+			<blue>0.7</blue>
+			<factor-prop>/controls/lighting/cabin-lights</factor-prop>
+		</specular>
+		
+		<diffuse>
+			<red>1.0</red>
+			<green>1.0</green>
+			<blue>0.7</blue>
+			<factor-prop>/controls/lighting/cabin-lights</factor-prop>
+		</diffuse>
+
+		<emission>
+			<red>0.3</red>
+			<green>0.3</green>
+			<blue>0.3</blue>
+			<factor-prop>/controls/lighting/cabin-lights</factor-prop>
+		</emission>
+	</animation>
+
+  <animation>
+	<type>material</type>
+	<object-name>knob.R</object-name>
+	
+	<specular>
+		<red>1.0</red>
+		<green>1.0</green>
+		<blue>1.0</blue>
+		<factor-prop>/controls/lighting/cabin-lights</factor-prop>
+	</specular>
+
+	<ambient>
+		<red>1.0</red>
+		<green>0.2</green>
+		<blue>0.2</blue>
+		<factor-prop>/controls/lighting/cabin-lights</factor-prop>
+	</ambient>
+</animation>
+
+  <animation>
+	<type>material</type>
+	<object-name>knob.L</object-name>
+	<ambient>
+		<red>0.2</red>
+		<green>1.0</green>
+		<blue>0.2</blue>
+		<factor-prop>/controls/lighting/cabin-lights</factor-prop>
+	</ambient>
+</animation>
+
 </PropertyList>
+

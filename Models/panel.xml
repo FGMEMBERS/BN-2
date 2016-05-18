@@ -1,0 +1,399 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>panel.ac</path>
+
+<!-- POSITION
+<model>
+	<name>panel</name>
+	<path>Aircraft/BN-2/Models/panel.xml</path>
+	<offsets>
+		<x-m>-2.188</x-m>
+		<y-m>0.0</y-m>
+		<z-m>-0.430</z-m>
+	</offsets> 
+</model>
+-->
+
+<animation>
+	<type>select</type>
+	<object-name>yoke-placeholder.L</object-name>
+	<condition>
+		<less-than>
+			<property>engines/engine[0]/rpm</property>
+			<value>0</value>
+		</less-than>
+	</condition>
+</animation>
+
+<model>
+	<name>yoke.L</name>
+	<path>Aircraft/BN-2/Models/yoke.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>-0.283</y-m>
+		<z-m>-0.34</z-m>
+		<pitch-deg>-12</pitch-deg>
+	</offsets> 
+</model>
+
+<model>
+	<name>yoke.R</name>
+	<path>Aircraft/BN-2/Models/yoke.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>0.283</y-m>
+		<z-m>-0.34</z-m>
+		<pitch-deg>-12</pitch-deg>
+	</offsets> 
+</model>
+
+
+<!-- Instrumentation -->
+
+<!-- column 1 -->
+<model>
+	<name>TC-pilot</name>
+	<path>Aircraft/Instruments-3d/tc/tc.xml</path>
+	<offsets>
+		<x-m>0.003</x-m>
+		<y-m>-0.485</y-m>
+		<z-m>-0.17</z-m>
+	</offsets> 
+</model>
+
+<!--secondary altimeter--> 
+
+<!-- column 2 -->
+<model>
+	<name>ASI-pilot</name>
+	<path>Aircraft/Instruments-3d/asi-pa24/asi.xml</path>
+	<offsets>
+		<x-m>0.001 </x-m> 
+		<y-m>-0.4 </y-m> 
+		<z-m>-0.08 </z-m>  
+	</offsets>
+</model>
+
+<!--KI-227?-->
+ <model>
+	<name>ADF</name>
+	<path>Aircraft/Instruments-3d/adf/adf.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>-0.4 </y-m> 
+		<z-m>-0.16</z-m> 
+	 </offsets>
+ </model>
+ 
+ <!-- some switch -->
+ 
+ 
+<!-- column 3 -->
+<model>
+	<name>AI</name>
+	<path>Aircraft/c172p/Models/Interior/Panel/Instruments/AI/AI.xml</path>
+	<offsets>
+		<x-m>0.007</x-m> 
+		<y-m>-0.279</y-m>
+		<z-m>-0.064</z-m>
+	</offsets>
+ </model>
+
+ <model>
+	<name>KI-252A</name>
+	<path>Aircraft/Instruments-3d/kfc200/ki252a.xml</path>
+	<offsets>
+		<x-m>0.020</x-m>
+		<y-m>-0.283</y-m>
+		<z-m>-0.16</z-m>
+	</offsets>
+ </model>
+ 
+ 
+ <!--KI-206?-->
+ <model>
+	<name>VOR</name>
+	<path>Aircraft/Instruments-3d/vor/vor.xml</path>
+	<offsets>
+		<x-m>0.007</x-m>
+		<y-m>-0.283</y-m>
+		<z-m>-0.25</z-m>
+	</offsets>
+ </model>
+ 
+<!-- yoke-->
+
+<!-- column 4-->
+<model>
+	<name>altimeter</name>
+	<path>Aircraft/Instruments-3d/alt/alt.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>-0.165</y-m> 
+		<z-m>-0.07</z-m> 
+	</offsets>
+</model>
+
+<model>
+	<name>VSI</name>
+	<path>Aircraft/Instruments-3d/vsi/vsi.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>-0.165</y-m>
+		<z-m>-0.17</z-m>
+	</offsets>
+</model>
+
+<!-- column 5-->
+<model>
+	<name>warning-lamps</name>
+	<path>Aircraft/BN-2/Instruments/warning-lamps.ac</path>
+	<offsets>
+		<x-m>0.004</x-m>
+		<y-m>-0.093</y-m>
+		<z-m>-0.094</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>clock</name>
+	<path>Aircraft/Instruments-3d/clock/clock.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>-0.085</y-m>
+		<z-m>-0.24</z-m>
+	</offsets>
+</model>
+
+
+<!-- copilot -->
+<model>
+	<name>ASI-copilot</name>
+	<path>Aircraft/Instruments-3d/asi-pa24/asi.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>0.273 </y-m> 
+		<z-m>-0.14</z-m>  
+	</offsets>
+</model>
+
+<model>
+	<name>AI-copilot</name>
+	<path>Aircraft/c172p/Models/Interior/Panel/Instruments/AI/AI.xml</path>
+	<offsets>
+		<x-m>0.018</x-m> 
+		<y-m>0.363</y-m>
+		<z-m>-0.14</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>alt-copilot</name>
+	<path>Aircraft/Instruments-3d/alt/alt.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>0.453</y-m>
+		<z-m>-0.14</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>TC-copilot</name>
+	<path>Aircraft/Instruments-3d/tc/tc.xml</path>
+	<offsets>
+		<x-m>0.03</x-m>
+		<y-m>0.273</y-m>
+		<z-m>-0.24</z-m>
+	</offsets> 
+</model>
+
+<model>
+	<name>HI-copilot</name>
+	<path>Aircraft/Instruments-3d/hi/hi.xml</path>
+	<!-- TODO- Sigma-Tek Directional Gyro-->
+	<offsets>
+		<x-m>0.03</x-m>
+		<y-m>0.363</y-m>
+		<z-m>-0.24</z-m>
+	</offsets> 
+</model>
+
+<model>
+	<name>vsi-copilot</name>
+	<path>Aircraft/Instruments-3d/vsi/vsi.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>0.453</y-m>
+		<z-m>-0.24</z-m>
+	</offsets> 
+</model>
+
+<!-- central column of engine gauges, vertical spacing .055m-->
+
+<model>
+	<name>tach-0</name>
+	<path>Aircraft/BN-2/Instruments/tach-0.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>-0.03</y-m>
+		<z-m>-0.045</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>tach-1</name>
+	<path>Aircraft/BN-2/Instruments/tach-1.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>0.03</y-m>
+		<z-m>-0.045</z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<name>manifold-pressure-0</name>
+	<path>Aircraft/BN-2/Instruments/manifold-pressure-0.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>-0.03</y-m>
+		<z-m>-0.10</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>manifold-pressure-1</name>
+	<path>Aircraft/BN-2/Instruments/manifold-pressure-1.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>0.03</y-m>
+		<z-m>-0.10</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>fuel-pressure-0</name>
+	<path>Aircraft/BN-2/Instruments/fuel-pressure-0.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>-0.03</y-m>
+		<z-m>-0.155</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>fuel-pressure-1</name>
+	<path>Aircraft/BN-2/Instruments/fuel-pressure-1.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>0.03</y-m>
+		<z-m>-0.155</z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<name>oil-temp-pressure-0</name>
+	<path>Aircraft/BN-2/Instruments/oil-temp-pressure-0.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>-0.03</y-m>
+		<z-m>-0.21</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>oil-temp-pressure-1</name>
+	<path>Aircraft/BN-2/Instruments/oil-temp-pressure-1.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>0.03</y-m>
+		<z-m>-0.21</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>egt-cht-0</name>
+	<path>Aircraft/BN-2/Instruments/egt-cht-0.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>-0.03</y-m>
+		<z-m>-0.265</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>egt-cht-1</name>
+	<path>Aircraft/BN-2/Instruments/egt-cht-1.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>0.03</y-m>
+		<z-m>-0.265</z-m>
+	</offsets>
+</model>
+
+
+<!-- Radio stack-->
+
+<!-- Sample Configuration
+     KMA 24H Audio Control System
+     KR 87 ADF
+     KX 155A Nav/Comm
+     KX 155A Nav/Comm
+     ??
+     KT 73 Transponder
+-->
+<model>
+	<name>kma20</name>
+	<path>Aircraft/Instruments-3d/kma20/kma20.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>0.14</y-m>
+		<z-m>-0.06</z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<name>kr87</name>
+	<path>Aircraft/Instruments-3d/kr87-adf/kr87.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>0.14</y-m>
+		<z-m>-0.115</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>kx165-1</name>
+	<path>Aircraft/Instruments-3d/kx165/kx165-1.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>0.14</y-m>
+		<z-m>-0.17</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>kx165-2</name>
+	<path>Aircraft/Instruments-3d/kx165/kx165-2.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>0.14</y-m>
+		<z-m>-0.225</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>kt70</name>
+	<path>Aircraft/Instruments-3d/kt70/kt70.xml</path>
+	<offsets>
+		<x-m>0.0</x-m>
+		<y-m>0.14</y-m>
+		<z-m>-0.28</z-m>
+	</offsets>
+</model>
+
+</PropertyList>

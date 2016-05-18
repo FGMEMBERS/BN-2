@@ -234,4 +234,39 @@
 			</or>
 		</condition>
 	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>elev-trim-ind</object-name>
+		<property>controls/flight/elevator-trim</property>
+		<factor>60</factor>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>elev-trim-wheel</object-name>
+		<property>controls/flight/elevator-trim</property>
+		<factor>6000</factor>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>-1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+	
 </PropertyList>

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>flap-indicators.ac</path>
+
+	<animation>
+		<type>select</type>
+		<object-name>bulb-lit.B</object-name>
+		<condition>
+			<equals>
+				<property>/controls/flight/flaps</property>
+				<value>1.0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>bulb.B</object-name>
+		<condition>
+			<not>
+				<equals>
+					<property>/controls/flight/flaps</property>
+					<value>1.0</value>
+				</equals>
+			</not>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>bulb-lit.M</object-name>
+		<condition>
+			<equals>
+				<property>/controls/flight/flaps</property>
+				<value>0.45</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>bulb.M</object-name>
+		<condition>
+			<not>
+				<equals>
+					<property>/controls/flight/flaps</property>
+					<value>0.45</value>
+				</equals>
+			</not>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>bulb-lit.T</object-name>
+		<condition>
+			<equals>
+				<property>/controls/flight/flaps</property>
+				<value>0.0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>bulb.T</object-name>
+		<condition>
+			<not>
+				<equals>
+					<property>/controls/flight/flaps</property>
+					<value>0.0</value>
+				</equals>
+			</not>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>bulb-lit.T</object-name>
+		<object-name>bulb-lit.B</object-name>
+		<object-name>bulb-lit.M</object-name>
+		<emission>
+			<red>1.0</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+			<factor-prop>/systems/electrical/outputs/instrument-lights-norm</factor-prop>
+		</emission>
+	</animation>
+
+</PropertyList>
+
+
