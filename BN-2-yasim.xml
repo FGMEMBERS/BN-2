@@ -209,12 +209,9 @@ ENGINES
 </propeller>
 
 
-<ballast x="-4.5" y="0.0" z="0" mass="-1800" />
-
-
+<ballast x="-2.5" y="0.0" z="0" mass="-3000" />
 
 <weight x="0.5" y="0" z="0" mass-prop="/sim/weight[0]/weight-lb"/>
 <weight x="-1.8" y="0" z="0" mass-prop="/sim/weight[1]/weight-lb"/>
-
  
 </airplane>
