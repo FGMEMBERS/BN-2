@@ -1,6 +1,9 @@
 <PropertyList >
 	<sim>
 		<description type="string">Britten-Norman BN-2 Islander</description>
+		<long-description>
+		The Britten-Norman BN-2 Islander is a 1960s British light utility aircraft, regional airliner and cargo aircraft designed and originally manufactured by Britten-Norman of the United Kingdom. Still in production, the Islander is one of the best-selling commercial aircraft types produced in Europe.
+		</long-description>
 		<author>Paul RICHTER; configuration and FDM based on work by Syd Adams</author>
 		<status>development</status>
 		<flight-model>yasim</flight-model>
@@ -13,6 +16,20 @@
 			</livery>
 			<show-pilot archive="y" type="bool">true</show-pilot>
 		</model>
+        <tags>
+            <tag>ga</tag>
+            <tag>cargo</tag>
+            <tag>passenger</tag>
+            <tag>britten-norman</tag>
+            <tag>1960s</tag>
+            <tag>1970s</tag>
+            <tag>ifr</tag>
+            <tag>fixed-gear</tag>
+            <tag>stol</tag>
+            <tag>turboprop</tag>
+            <tag>2-engine</tag>
+        </tags>
+		
 		<startup>
 			<splash-texture>Aircraft/BN-2/BN-2-splash.png</splash-texture>
 		</startup>
@@ -115,7 +132,7 @@
 
         <weight n="1">
             <name>Pax/Baggage</name>
-            <weight-lb>1500</weight-lb>
+            <weight-lb>0</weight-lb>
             <max-lb>1700</max-lb>
             <min-lb>0</min-lb>
         </weight>
