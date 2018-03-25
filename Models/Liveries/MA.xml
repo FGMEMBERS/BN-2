@@ -5,7 +5,7 @@
   <model>
    <livery>
     <name type="string">Mustique Airways</name>
-    <texture>Liveries/MA/BN-2-livery.png</texture>
+    <texture>Liveries/MA.png</texture>
    </livery>
   </model>
  </sim>

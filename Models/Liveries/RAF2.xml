@@ -5,7 +5,7 @@
   <model>
    <livery>
     <name type="string">Royal Army Air Corps</name>
-    <texture>Liveries/RAF2/BN-2-livery.png</texture>
+    <texture>Liveries/RAF2.png</texture>
    </livery>
   </model>
  </sim>
