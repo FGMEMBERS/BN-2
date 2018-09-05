@@ -95,9 +95,9 @@
 	<name>AI</name>
 	<path>Aircraft/c172p/Models/Interior/Panel/Instruments/AI/AI.xml</path>
 	<offsets>
-		<x-m>0.007</x-m> 
-		<y-m>-0.279</y-m>
-		<z-m>-0.064</z-m>
+		<x-m>0.385</x-m> 
+		<y-m>-0.06</y-m>
+		<z-m>-0.16</z-m>
 	</offsets>
  </model>
 
@@ -183,9 +183,9 @@
 	<name>AI-copilot</name>
 	<path>Aircraft/c172p/Models/Interior/Panel/Instruments/AI/AI.xml</path>
 	<offsets>
-		<x-m>0.018</x-m> 
+		<x-m>0.385</x-m> 
 		<y-m>0.363</y-m>
-		<z-m>-0.14</z-m>
+		<z-m>-0.16</z-m>
 	</offsets>
 </model>
 
