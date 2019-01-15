@@ -175,7 +175,7 @@
 	<offsets>
 		<x-m>0.0</x-m>
 		<y-m>0.273 </y-m> 
-		<z-m>-0.14</z-m>  
+		<z-m>-0.16</z-m>  
 	</offsets>
 </model>
 
@@ -184,8 +184,8 @@
 	<path>Aircraft/c172p/Models/Interior/Panel/Instruments/AI/AI.xml</path>
 	<offsets>
 		<x-m>0.385</x-m> 
-		<y-m>0.363</y-m>
-		<z-m>-0.16</z-m>
+		<y-m>0.580</y-m>
+		<z-m>-0.26</z-m>
 	</offsets>
 </model>
 
@@ -195,7 +195,7 @@
 	<offsets>
 		<x-m>0.0</x-m>
 		<y-m>0.453</y-m>
-		<z-m>-0.14</z-m>
+		<z-m>-0.16</z-m>
 	</offsets>
 </model>
 
@@ -203,8 +203,8 @@
 	<name>TC-copilot</name>
 	<path>Aircraft/Instruments-3d/tc/tc.xml</path>
 	<offsets>
-		<x-m>0.03</x-m>
-		<y-m>0.273</y-m>
+		<x-m>0.01</x-m>
+		<y-m>0.267</y-m>
 		<z-m>-0.24</z-m>
 	</offsets> 
 </model>
@@ -214,8 +214,8 @@
 	<path>Aircraft/Instruments-3d/hi/hi.xml</path>
 	<!-- TODO- Sigma-Tek Directional Gyro-->
 	<offsets>
-		<x-m>0.03</x-m>
-		<y-m>0.363</y-m>
+		<x-m>0.01</x-m>
+		<y-m>0.361</y-m>
 		<z-m>-0.24</z-m>
 	</offsets> 
 </model>
